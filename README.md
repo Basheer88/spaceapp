@@ -4,6 +4,7 @@ This is simple app used by all space companies such as (Nasa and spaceX) to shar
 
 ## Requirments
 python version 3 ( Can be download from [here](https://www.python.org/downloads/))
+
 virtual Environment.
 
 ## DataBase
@@ -30,9 +31,12 @@ download or Clone the GitHub repository
 https://github.com/Basheer88/spaceapp.git
 
 # Files of the repository
-SpaceApp file : run this file to make the app working then access the app using (localhost:8000)
-database_setup : to generate an empty database
-initial_info : this will add one entry for the empty database. can be used to help you understand how to add entry to the database.
+database_setup : to generate an empty database run ( python database_setup)
+
+initial_info : this will add one entry for the empty database. can be used to help you understand how to add entry to the database. run ( python initial_info.py)
+
+SpaceApp file : this file to make the app working. first run (run python SpaceApp.py) then access the app using (localhost:8000)
+
 
 # License
 Free license. Feel free to do whatever you want with it.
