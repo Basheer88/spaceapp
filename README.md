@@ -30,6 +30,8 @@ download or Clone the GitHub repository
 
 https://github.com/Basheer88/spaceapp.git
 
+install all the requirment package ( pip install -r requirements.txt )
+
 # Files of the repository
 database_setup : to generate an empty database run ( python database_setup)
 
