@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Space App</title>
+		<link rel="icon" href="{{ url_for('static', filename='icon.png') }}">
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='SpaceStyles.css') }}">
+	</head>
+	<body>
+		<div class="container">
+			{% block content %}
+			{% endblock %}
+		</div>
+	</body>
+</html>

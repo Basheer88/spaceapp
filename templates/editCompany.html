@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+	<div class="row">
+		<div>
+			<h1>Edit {{ company.name }}
+			<figure class="creator">
+				<img src="{{ company.picture }}">
+				<figcaption>{{ company.name }}</figcaption>
+			</figure>
+			</h1>
+		</div>
+	</div>
+
+	
+	<div class="form">
+		<form action="{{ url_for('editCompany', company_id = company.id)}}" method = "post">
+				<label for="name">Name:</label>
+				<input type ="text" name="name" value="{{company.name }}">
+				<button type="submit" class="btn" id="submit" type="submit">Save</button>
+				<a href = '{{url_for('showCompanies')}}'>
+					<button class="btn">Cancel</button>
+				</a>
+		</form>
+	</div>
+{% endblock %}

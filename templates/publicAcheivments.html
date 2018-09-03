@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="row">
+	<div>
+		<h1>{{ company.name }}
+		<figure class="creator">
+			<img src="{{ company.picture }}">
+			<figcaption>{{ company.name }}</figcaption>
+		</figure>
+		</h1>
+	</div>
+</div>
+
+
+<div class = 'flash'>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}  
+    		<ul>
+    		{% for message in messages %}
+    			<li> <strong> {{ message }} </strong> </li>
+    		{% endfor %}
+    		</ul>
+    	{% endif %}
+    {% endwith %}
+</div>
+
+
+{% if acheivments !=[] %}	
+	{% for acheivment in acheivments %}
+		<div class="menu-item">
+			<h3>{{acheivment.title}}</h3>
+			<p>{{acheivment.description}}</p>
+		</div>
+	{% endfor %}
+{% endif %}
+
+{% endblock %}

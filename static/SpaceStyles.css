@@ -1,0 +1,180 @@
+* {
+	font-family: "Helvetica Neue Bold", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 50px;
+	color: #51453B;
+	line-height: 60px;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 24px;
+	color: #42C3C9;
+	line-height: 29px;
+	text-decoration: underline;
+}
+
+h3 {
+	font-size: 18px;
+	color: #4A4A4A;
+	line-height: 23px;
+}
+
+p {
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ 	font-weight: 400;
+ }
+
+strong {
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ }
+
+a {
+ 	color: #0093B9;
+ 	line-height: 17px;
+ 	text-decoration: none;
+ }
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.top {
+	width: 95%;
+	display: flex;
+}
+
+.left {
+	text-align: left;
+	width: 50%;
+	font-size: 26px;
+	margin: 0;
+}
+
+.right {
+	font-size: 26px;
+	width: 50%;
+	text-align: right;
+}
+
+.flash {
+	background-color: #98FB98;
+	width:94%;
+	text-decoration: none;
+	margin: 0 2% 0 2%; 
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	width: 94%;
+	margin: 0 2% 0 2%; 
+}
+
+.companyMenu {
+	width: 20%;
+	border-style: groove;
+	border-color: #b3ffff;
+	border-width: 5px;
+	margin: 5px 5px 5px 5px;
+}
+
+.acheivmentMenu {
+	width: 77%;
+	border-style: groove;
+	border-color: #b3ffff;
+	border-width: 5px;
+	margin: 5px 5px 5px 5px;
+}
+
+.link:hover {
+	background-color: #ffe066;
+}
+
+.btnContainer {
+	width: 94%;
+	margin-right: 2%;
+	margin-left: 2%;
+	margin-top: 10px;
+}
+
+.btn {
+	width: 20%;
+	height: 60px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+	background-color: white;
+	color: #4CAF50;
+	border: 2px solid #4CAF50;
+}
+
+.row {
+	height: 150px;
+	width: 94%;
+	margin-right: 2%;
+	margin-left: 2%;
+	border-bottom: solid green;
+	border-width: 10px;
+	background-color: #bee7e3;
+}
+
+.form {
+	width: 90%;
+	border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 2%;
+}
+
+.textarea {
+	width: 30%;
+}
+
+.creator {
+	padding-right: 20px;
+	margin-top: -20px;
+	text-align: right;
+	float:right;
+}
+
+.creator img {
+	width: 100px;
+	border-radius: 50%;
+}
+
+.creator figcaption {
+	font-size: 14px;
+	color: #7B7573;
+	font-weight: 400;
+	margin-top: -20px;
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;
+}
+
+.menu-item {
+	background: #F0F0F0;
+	padding: 20px;
+	width: 91%;
+	margin: 1% 2% 0% 2%;
+}

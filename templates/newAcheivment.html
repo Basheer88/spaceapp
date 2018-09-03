@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+	<div class="row">
+		<div>
+			<h1>New Acheivment
+			<figure class="creator">
+				<img src="{{ company.picture }}">
+				<figcaption>{{ company.name }}</figcaption>
+			</figure>
+			</h1>
+		</div>
+	</div>
+
+	<div class="form">
+		<form action="#" method = "post">
+				<label for="name">Title:</label>
+				<input type ="text" maxlength="50" name = "title"><br>
+				<label for="description">Description:</label><br>
+				<textarea class = "textarea" maxlength="1000" rows="10" name="description"></textarea><br>
+				<button type="submit" class="btn" id="submit" type="submit">Create</button>
+		</form>
+	</div>
+{% endblock %}
+
+

@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block content %}
+
+<div class="row">
+	<div>
+		<h1>New Company
+		<figure class="creator">
+			<img src="{{ url_for('static', filename='spaceman.png') }}">
+			<figcaption>SpaceMan</figcaption>
+		</figure>
+		</h1>
+	</div>
+</div>
+
+<div class="form">
+	<form action="#" method = "post">
+		<label for="name">Name:</label>
+		<input type ="text" class="form-control" maxlength="250" name="name">
+		<button type="submit" class="btn" id="submit" type="submit">Create</button>
+	</form>
+</div>
+
+{% endblock %}

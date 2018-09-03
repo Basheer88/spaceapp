@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+	<div class="row">
+		<div>
+			<h1>Edit Acheivment 
+			<figure class="creator">
+				<img src="{{ company.picture }}">
+				<figcaption>{{ company.name }}</figcaption>
+			</figure>
+			</h1>
+		</div>
+	</div>
+
+
+	<div class="form">
+		<form action="#" method = "post">
+			<label for = "name">Title:</label>
+			<input type = "text" maxlength="250" name = "title" value="{{item.title}}"><br>
+			<label for = "description">Description:</label><br>
+			<textarea class = "textarea" maxlength="250" rows="3" name="description">{{item.description}}</textarea><br>
+			<button type="submit" class="btn" id="submit" type="submit">Save</button>
+			<a href = '{{url_for('showCompanies')}}'>
+				<button class="btn" type="button">Cancel</button>
+			</a>
+		</form>
+	</div>
+{% endblock %}

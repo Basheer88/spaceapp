@@ -1,0 +1,61 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="top">
+	<div class="left"> </div>
+	<div class="right">
+		<a href="{{url_for('showLogin')}}">Click Here to Login </a>
+	</div>
+</div>
+
+<div class="row">
+	<div>
+		<h1>Welcome to Our New Space App
+		<figure class="creator">
+			<img src="{{ url_for('static', filename='spaceman.png') }}">
+			<figcaption>SpaceMan</figcaption>
+		</figure>
+		</h1>
+	</div>
+</div>
+
+<div class = 'flash'>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}  
+    		<ul>
+    		{% for message in messages %}
+    			<li> <strong> {{ message }} </strong> </li>
+    		{% endfor %}
+    		</ul>
+    	{% endif %}
+    {% endwith %}
+</div>
+
+<div class="btnContainer">
+		<a href="{{url_for('newCompany')}}">
+			<button class="btn">Add Company</button>
+		</a>
+</div>
+
+<div class = "menu">
+	<div class="companyMenu">
+		<h2>Company</h2>
+		{% for company in companies %}
+			<div class = "link">
+				<a href = "{{url_for('showCompany', company_id = company.id)}}">
+					<h3>{{company.name}}</h3>
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="acheivmentMenu">
+		<h2>Latest Acheivment Added</h2>
+		{% for acheivment in acheivments %}
+			<div class = "link">
+				<a href = "{{url_for('sAcheivment', acheivment_id = acheivment.id)}}">
+					<h3>{{acheivment.title}}</h3>
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}

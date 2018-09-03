@@ -1,0 +1,49 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="row">
+	<div>
+		<h1>{{ company.name }}
+		<figure class="creator">
+			<img src="{{ company.picture }}">
+			<figcaption>{{ company.name }}</figcaption>
+		</figure>
+		</h1>
+	</div>
+</div>
+
+<div class = 'flash'>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}  
+    		<ul>
+    		{% for message in messages %}
+    			<li> <strong> {{ message }} </strong> </li>
+    		{% endfor %}
+    		</ul>
+    	{% endif %}
+    {% endwith %}
+</div>
+
+<div class="btnContainer">
+		<a href="{{url_for('editCompany', company_id = company.id )}}">
+			<button class="btn">Edit Company</button>
+		</a>
+		<a href="{{url_for('newAcheivment', company_id = company.id )}}">
+			<button class="btn">Add Acheivment</button>
+		</a>
+		<a href="{{url_for('deleteCompany', company_id = company.id )}}">
+			<button class="btn">Delete Company</button>
+		</a>
+</div>
+
+{% if acheivments !=[] %}	
+	{% for acheivment in acheivments %}
+		<div class="menu-item">
+			<h3>{{acheivment.title}}</h3>
+			<p>{{acheivment.description}}</p>
+			<a href='{{url_for('editAcheivment', company_id = company.id, acheivment_id=acheivment.id ) }}'>Edit</a> | 
+			<a href='{{url_for('deleteAcheivment', company_id = company.id, acheivment_id=acheivment.id ) }}'>Delete</a>
+		</div>
+	{% endfor %}
+{% endif %}
+{% endblock %}
