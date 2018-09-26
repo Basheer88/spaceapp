@@ -322,7 +322,7 @@ def editCompany(company_id):
         return render_template('editCompany.html', company=editedCompany)
 
 
-# Delete a brand
+# Delete Company
 @app.route('/company/<int:company_id>/delete/', methods=['GET', 'POST'])
 def deleteCompany(company_id):
     companyToDelete = session.query(Company).filter_by(id=company_id).one()
